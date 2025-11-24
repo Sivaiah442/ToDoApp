@@ -1,0 +1,115 @@
+/* Container styling for centering content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16vh;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #24415a;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.input {
+    padding: 10px 15px;
+    border: 2px solid #24415a;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1.1rem;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    margin-right: 8px;
+}
+
+.input:focus, .input:hover {
+    border-color: #ffa726;
+    box-shadow: 0 2px 8px #ffa72644;
+}
+
+/* Add button with animated hover */
+.add {
+    padding: 10px 32px;
+    border-radius: 10px;
+    border: 2px solid #24415a;
+    background: #ffa726;
+    color: #24415a;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s, box-shadow 0.4s;
+    box-shadow: 0 8px 20px 0 rgba(36,65,90,0.10);
+    margin-left: 8px;
+}
+
+.add:hover, .add:focus {
+    background: #24415a;
+    color: #ffa726;
+    box-shadow: 0 0 0 4px #ffa72622;
+    transform: translateY(-2px) scale(1.07);
+}
+
+/* To-Do list styling with hover effect */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 32px;
+}
+
+li {
+    position: relative;
+    padding: 12px 24px;
+    margin: 12px 0;
+    background: #f6fafc;
+    border-radius: 10px;
+    color: #24415a;
+    font-size: 1.15rem;
+    box-shadow: 0 2px 24px 0 rgba(36,65,90,0.05);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.4s;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+li:hover {
+    background: #dbeafe;
+    box-shadow: 0 6px 32px #24415a33;
+    transform: scale(1.024) translateY(-1px);
+}
+
+.del {
+    padding: 6px 14px;
+    background: #ff5f57;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 6px #ff5f5744;
+    margin-left: auto;
+    transition: background 0.18s, transform 0.25s, box-shadow 0.2s;
+}
+
+.del:hover, .del:focus {
+    background: #d7263d;
+    transform: scale(1.12) rotate(-10deg);
+    box-shadow: 0 4px 12px #d7263d44;
+}
+
+/* Add animation for new tasks */
+li {
+    animation: fadeIn 0.5s cubic-bezier(0.77,0,0.18,1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(26px) scale(0.82);}
+    to   { opacity: 1; transform: translateY(0) scale(1);}
+}
+.add {
+    margin-top: 18px;  /* Adds 18px space above the button */
+}
